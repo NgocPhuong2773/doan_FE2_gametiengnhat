@@ -1,0 +1,246 @@
+body {
+    background-image: radial-gradient(#101010, rgb(104 176 48));
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    transition: all cubic-biezer(0.7, 0.6, 0.5, 1) 0.3s;
+}
+
+a {
+    color: #000;
+    display: inline;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 1px dotted #000;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0 auto;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+/* layout */
+
+
+/* css cho bong */
+
+.circle {
+    position: relative;
+    display: block;
+    height: 50px;
+    left: 0;
+    line-height: 40px;
+    position: absolute;
+    top: 0;
+    width: 50px;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
+    background-position: center;
+}
+
+
+/* css bảng thông báo */
+
+.showlog {
+    background-image: radial-gradient(#101010, rgb(104 176 48));
+    color: #fff;
+    display: none;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 999;
+}
+
+.thongbao {
+    position: relative;
+    top: 10px;
+}
+
+.title {
+    margin-top: 70px;
+    font-size: 90px;
+    color: red;
+}
+
+.thongbao p {
+    font-size: 40px;
+}
+
+#scorescreen {
+    display: none;
+}
+
+#instructscreen p {
+    position: relative;
+    font-size: 20px;
+    text-align: left;
+    padding: 0 30px;
+}
+
+#instructscreen img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+#instructscreen .iconClose {
+    position: absolute;
+    top: -25px;
+    right: 10px;
+    font-size: 25px;
+}
+
+#content {
+    position: relative;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.76);
+}
+
+
+/* css các chức năng */
+
+#stat,
+.ts,
+.start,
+.tools,
+.instruct {
+    position: absolute;
+}
+
+#stat {
+    text-align: right;
+}
+
+#stat {
+    color: #fff;
+    left: 55px;
+    width: 100%;
+}
+
+.start {
+    right: -210px;
+    bottom: 455px;
+}
+
+.tools {
+    right: -270px;
+    bottom: 220px;
+}
+
+.instruct {
+    right: -212px;
+    bottom: 320px;
+}
+
+#btnstart,
+#btnreturn {
+    display: inline-block;
+    font-size: 30px;
+    padding: 10px;
+    background: bottom;
+    color: currentColor;
+    border: dotted;
+    border-radius: 25%;
+}
+
+#btnstart:hover,
+#btnreturn:hover {
+    background: brown;
+    color: aqua;
+    border: double;
+}
+
+.ts {
+    right: -260px;
+    bottom: 80px;
+    text-align: left;
+}
+
+#timer,
+#score {
+    display: block;
+    font-size: 50px;
+}
+
+.time,
+.score {
+    float: left;
+    margin: 10px 30px;
+}
+
+.life,
+.arrow,
+.iconinst {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin-right: 40px;
+    cursor: pointer;
+    color: #000;
+    border-radius: 35px;
+    font-size: 25px;
+    background-size: cover !important;
+    float: left;
+}
+
+.life:hover,
+.arrow:hover,
+.iconinst:hover,
+.fas:hover {
+    transform: scale(1.1);
+}
+
+#life,
+#arrow {
+    position: absolute;
+    top: 22px;
+    left: 27px;
+}
+
+.life {
+    background: url(../image/tim.png) no-repeat;
+}
+
+.arrow {
+    background: url(../image/arrow.jfif) no-repeat center;
+}
+
+
+/* css khung choi */
+
+.game-container {
+    /* background: rgb(4, 243, 191);
+    border: 2px solid rgba(255, 255, 255, 0.7); */
+    height: 575px;
+    margin: 15px auto;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 99%;
+}
+
+.circle-container {
+    margin: 0 140px;
+    padding: 0;
+    position: relative;
+    width: 800px;
+}

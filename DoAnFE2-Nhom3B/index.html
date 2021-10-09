@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/css/game.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="circle-container">
+        <section id="=content">
+            <div id="game-container" class="game-container">
+
+            </div>
+
+            <div class="showlog" id="showlog">
+                <ul class="thongbao" id="thongbao">
+                    <li id="startscreen">
+                        <h1 class="title">Start Game </h1>
+                        <p>Nhấn Start để bắt đầu chơi. </p>
+                    </li>
+                    <li id="overscreen">
+                        <h1 class="title">Game Over </h1>
+                        <p id="result">
+                        </p>
+                    </li>
+                    <li id="instructscreen">
+
+                        <p>- Nhấn nút Start bên phải để bắt đầu chơi. <br> - Màn hình sẽ hiển thị các bong bóng rơi từ trên xuống dưới. Bên trong bong bóng sẽ chứa các ký tự trong bảng Hiragana và số đếm bằng kanji.<br> - Người chơi sẽ gõ các ký tự latin
+                            hoặc chữ số tương ứng trên bàn phím. Nếu gõ đúng, bong bóng sẽ bể => người chơi được +1 điểm.<br> - Nếu người chơi để 1 bong bóng chạm sàn => trò chơi kết thúc.<br> - Trong các bong bóng, thỉnh thoảng sẽ có bong bóng màu đỏ,
+                            nếu gõ đúng bong bóng màu đỏ => được +2 điểm.<br> - Thỉnh thoảng sẽ xuất hiện các bong bóng màu đen. Người chơi không được gõ bong bóng đen mà phải để nó chạm sàn rồi biến mất. Nếu gõ trúng bong bóng đen => trò chơi kết thúc.<br>                            - Chức năng bắn bong bóng. Người chơi có sẵn 3 mũi tên để bắn bể bong bóng nào mình không biết gõ hoặc gõ không kịp. Người chơi click chọn mũi tên <img src="./public/image/arrow.jfif" alt="">, sau đó click lên bong bóng để
+                            bắn bể. Nếu bắn hết 3 mũi tên có sẵn, người chơi có thể nhấp vào <img src="./public/image/arrow.jfif" alt="">đổi 5 điểm để lấy thêm mũi tên.<br> - Chức năng thêm lượt chơi: Người chơi có sẵn 1 lượt chơi. Khi số lượt chơi hiện
+                            thị trên <img src="./public/image/tim.png" alt=""> nhiều hơn 1 thì khi bong bóng chạm sàn bạn sẽ không bị Game Over. Người chơi có thể nhấp vào <img src="./public/image/tim.png" alt=""> đổi 5 điểm để lấy thêm 1 lượt. <br> -
+                            Tốc độ rơi của bong bóng sẽ tăng dần theo thời gian.</p>
+                        <div class="iconClose" onclick="closelog()">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+
+
+                    </li>
+                </ul>
+            </div>
+            <div id="stat">
+                <div class="start">
+                    <button id="btnstart">START</button>
+                    <button id="btnreturn">Return Game</button>
+                </div>
+                <div class="instruct">
+                    <img class="iconinst" src="./public/image/instruction.jfif" alt="" onclick="iconinstion()">
+                </div>
+
+                <div class="tools">
+                    <div class="life"><span id="life">1</span></div>
+                    <div class="arrow"><span id="arrow">3</span></div>
+                </div>
+                <div class="ts">
+
+                    <div class="time">
+                        TIME
+                        <span id="timer"> 0 </span>
+                    </div>
+                    <div class="score">
+                        SCORE
+                        <span id="score"> 0 </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script type="text/javascript" src="public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="public/js/game.js"></script>
+
+    <script type="text/javascript">
+        var $ = jQuery;
+        $(function() {
+            var p = new Platform();
+            p.init();
+        })();
+    </script>
+
+
+</body>
+
+</html>
